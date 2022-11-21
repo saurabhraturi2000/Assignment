@@ -7,8 +7,28 @@ class FirstWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return Container(
+      height: MediaQuery.of(context).size.height * 0.5,
+      child: PageView(
+        children: const [
+          NewWidget(),
+          NewWidget(),
+          NewWidget(),
+        ],
+      ),
+    );
+  }
+}
+
+class NewWidget extends StatelessWidget {
+  const NewWidget({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.all(21),
       child: Container(
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
@@ -36,28 +56,26 @@ class FirstWidget extends StatelessWidget {
                               Text(
                                 'Sumit',
                                 style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 20),
+                                    fontWeight: FontWeight.bold, fontSize: 17),
                               ),
                               SizedBox(width: 10),
                               Text(
                                 '22,400 views',
                                 style: TextStyle(
-                                    fontSize: 18, color: Color(0xff898989)),
+                                    fontSize: 12, color: Color(0xff898989)),
                               )
                             ],
                           ),
                           const Text(
                             'Pune,India.22 Oct,2022',
                             style: TextStyle(
-                                fontSize: 18, color: Color(0xff898989)),
+                                fontSize: 14, color: Color(0xff898989)),
                           )
                         ],
                       )
                     ],
                   ),
-                  Column(
-                    children: const [Icon(Icons.more_vert)],
-                  )
+                  const Icon(Icons.more_vert)
                 ],
               ),
               const SizedBox(height: 30),
@@ -66,7 +84,7 @@ class FirstWidget extends StatelessWidget {
                   Text(
                     "When selecting a typeface or font for headings, subtitles and body text, use easy to read fonts for simple Apply scale to type, shapes or compositional features that need proportionate emphasis.",
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 14,
                       color: Color(0xff303030),
                     ),
                   ),
@@ -74,7 +92,7 @@ class FirstWidget extends StatelessWidget {
                   Text(
                     'Use appropriate colors to enhance this technique while making sure suitable typefaces that look good when increased in size.',
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 14,
                       color: Color(0xff303030),
                     ),
                   ),
@@ -153,9 +171,7 @@ class FirstWidget extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Row(
-                    children: [Image.asset('assets/save.png')],
-                  )
+                  Image.asset('assets/save.png')
                 ],
               ),
             ],

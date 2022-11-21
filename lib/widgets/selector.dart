@@ -22,8 +22,9 @@ class _SelectorState extends State<Selector> {
               return Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: Container(
+                  height: 35,
                   decoration: BoxDecoration(
-                    border: Border.all(color: const Color(0xff282828)),
+                    border: Border.all(color: const Color(0xffCDD0D3)),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Padding(
@@ -31,7 +32,8 @@ class _SelectorState extends State<Selector> {
                         const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                     child: Text(
                       selector[index],
-                      style: const TextStyle(color: Colors.black, fontSize: 20),
+                      style: const TextStyle(
+                          color: Color(0xff000000), fontSize: 20),
                     ),
                   ),
                 ),

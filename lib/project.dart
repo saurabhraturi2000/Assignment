@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project/widgets/second_widget.dart';
 import 'package:flutter_project/widgets/selector.dart';
-import 'package:flutter_project/widgets/third_widget.dart';
 
 import 'widgets/first_widget.dart';
 
@@ -16,14 +15,18 @@ class HomePage extends StatelessWidget {
         leading: const Icon(
           Icons.menu,
           color: Color(0xff282828),
-          size: 30,
+          size: 24,
         ),
         actions: [
           IconButton(
-            icon: Image.asset('assets/Vector.png'),
+            icon: Image.asset(
+              'assets/Vector.png',
+              height: 24,
+              width: 24,
+            ),
             onPressed: () {},
             color: const Color(0xff929597),
-            iconSize: 30,
+            iconSize: 24,
           ),
         ],
         elevation: 0,
@@ -37,7 +40,7 @@ class HomePage extends StatelessWidget {
           Divider(
             thickness: 2,
           ),
-          ThirdWidget(),
+          SecondWidget(),
           Divider(
             thickness: 2,
           ),
